@@ -1,0 +1,134 @@
+Important points on Python:-
+
+-Variable names should contain only letters, digits, and underscores.
+-It should start with a letter or an underscore.
+-Three quotes are used for multiline strings.
+- len() function is used to get the length of a string.
+-If we try to access an index out of the range, we will get an IndexError.
+-str[s:e] is used to get a substring from index s to e-1.(including s and excluding e)
+
+- dir(stringname) - returns a list of all the methods that can be called on a string.
+- help(str)- returns the documentation of the string methods.
+
+##For all the functions which return we have to give print() function to see the output.  
+
+String Methods:-
+
+- str.lower() - returns the lowercase version of the string.
+- str.upper() - returns the uppercase version of the string.
+- str.count(substring)- returns the number of occurrences of the substring in the string.
+- str.find(substring) - returns the index of the first occurrence of the substring in the string.
+- str.replace(old, new) - replaces all occurrences of the old substring with the new substring and returns it.
+
+Int and Float:-
+
+- Division gives you a float. Floor division gives you an integer.
+- ** is used for exponentiation.
+
+- abs(x) - returns the absolute value of a number.
+- round(x,n)- returns x rounded to n decimal places.
+- int(x) - converts x to an integer.(Casting)
+
+List:-
+
+- Lists are mutable.
+- Lists can contain any data type.
+
+- list.append(x) - appends x to the end of the list.
+- list.insert(i, x) - inserts x at index i.   (if x is a list, it will be inserted as a single element)
+- list.extend(lst) - appends all elements of lst to the list.
+- list.remove(x) - removes the first occurrence of x in the list. (Returns nothing)
+- list.pop(i) - removes the element at index i. (Returns the removed element)
+- list.reverse() - reverses the list.
+- list.sort() - sorts the list in ascending order.
+- list.sort(reverse=True) - sorts the list in descending order.
+- sorted(list) - returns a sorted version of the list without modifying the original list.
+- min(list), max(list), sum(list)
+- list.index(x) - returns the index of the first occurrence of x in the list.
+- enumerate(list) - returns a list of tuples where each tuple contains the index and the element of the list.
+- enumerate(list, start=n) - returns a list of tuples where each tuple contains the index and the element of the list, starting from n.
+
+
+Tuple:-
+
+- Tuples are immutable.(We cannot change the elements of a tuple once it is assigned)
+
+Sets:-
+
+- Sets do not allow duplicate elements.
+- Sets are unordered.
+- Mostly used for membership testing 
+
+
+# Empty Lists
+empty_list = []
+empty_list = list()
+
+# Empty Tuples
+empty_tuple = ()
+empty_tuple = tuple()
+
+# Empty Sets
+empty_set = {} # This isn't right! It's a dict
+empty_set = set()
+
+Dictionaries:-
+
+- Similar to Hashmaps
+- We get KeyError if we try to access a key that does not exist.
+- dict.get(key) - returns the value of the key. If the key does not exist, it returns None.
+- dict.get(key, default) - returns the value of the key. If the key does not exist, it returns the default value.
+- dict.update(other_dict) - updates the dictionary with the items from the other dictionary.
+- dict.keys() - returns a list of all keys.
+- dict.values() - returns a list of all values.
+- del dict[key] - removes the item with key from the dictionary.
+- dict.pop(key) - removes the item with key from the dictionary and returns its value.
+- len(dict) - returns the number of items in the dictionary.
+- dict.keys() - returns a list of all keys.
+- dict.values() - returns a list of all values.
+- dict.items() - returns a list of key-value pairs as tuples.
+
+
+Conditional Statements:-
+
+if condition1 and condition2:
+    #code
+
+- An empty string, list, set, dict, etc. are considered False in Python.
+
+Loops:-
+    for i in range(s,e):  (s is inclusive and e is exclusive)
+
+
+Import:-
+
+    import module as m
+    m.functionname()
+
+    from module import functionname
+    functionname()
+
+    from module import * (imports all the functions)
+
+
+
+OS-
+    import os
+    print(dir(os))- returns all the functions in the os module.
+    print(os.getcwd())- returns the current working directory.
+    os.chdir('path')- changes the directory to the given path.
+    print(os._file_)- returns the path of the file.
+    print(os.listdir())- returns the list of files in the directory.
+    os.mkdir('dirname')- creates a directory. ( cannot create subdirectories)
+    -os.makedirs('dirname/subdirname')- creates a directory with subdirectories.(if the parent directory does not exist, it will create that too)
+    - use makedirs instead of mkdir.
+    os.rmdir('dirname')- just removes the directory.(dirname can be a path. it will only remove the last directory in the path.)
+    os.removedirs('dirname/subdirname')- removes everything in the path including directory and subdirectories.
+
+    os.rename('oldname', 'newname')- renames the file.
+    os.stat('filename')- returns the statistics of the file.
+
+    os.path.isfile('filename')- returns True if the file exists.
+    os.path.isdir('dirname')- returns True if the directory exists.
+
+    os.path.splitext('filename')- returns a tuple with the filename and the extension.
